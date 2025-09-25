@@ -106,3 +106,105 @@ public class StudentPortal {
     }
 }
 ```
+
+---
+
+# 🎓 StudentPortal – University Student Portal Simulation
+
+This Java program simulates a **University Student Portal System** using different implementations of the **`Map` interface** (`HashMap`, `LinkedHashMap`, and `TreeMap`). It demonstrates how student records (roll numbers → names) can be stored, retrieved, updated, and displayed depending on the type of map chosen.
+
+---
+
+## 🚀 Features Demonstrated
+
+### 1. **HashMap (Unordered, Fast Access)**
+- Stores student roll numbers as **keys** and names as **values**.  
+- Does **not guarantee order** of entries.  
+- Allows one `null` key and multiple `null` values.  
+- Operations (`put`, `get`, `remove`) are **O(1)** on average.  
+
+**Example:**  
+```java
+var studentData = new HashMap<Integer, String>();
+studentData.put(101, "Alice Johnson");
+studentData.put(105, "Bob Williams");
+studentData.put(102, "Charlie Brown");
+```
+
+---
+
+### 2. **Basic Operations**
+- **Add Students** → Insert roll number and name.  
+- **Access Student** → Retrieve by roll number (`get(key)`).  
+- **Remove Student** → Delete by roll number (`remove(key)`).  
+- **Count Students** → Get total enrolled (`size()`).  
+- **Loop Through Students**:
+  - `keySet()` → All roll numbers.  
+  - `values()` → All names.  
+  - `entrySet()` → Roll number + name pairs.  
+
+---
+
+### 3. **Map Interface Methods**
+- `containsKey()` → Check if a roll number exists.  
+- `containsValue()` → Check if a student name exists.  
+- `replace()` → Update a student’s name safely.  
+
+---
+
+### 4. **LinkedHashMap (Preserves Insertion Order)**
+- Maintains the **order in which students were added**.  
+- Useful for features like **“Recently Enrolled Students”**.  
+
+**Example Output:**  
+```
+101 -> Alice Johnson
+105 -> Bob Williams
+102 -> Charlie Brown
+104 -> Diana Miller
+```
+
+---
+
+### 5. **TreeMap (Sorted by Roll Number)**
+- Automatically sorts students by **roll number** (natural order).  
+- Useful for **faculty reports, directories, or range queries**.  
+
+**Example Output:**  
+```
+101 -> Alice Johnson
+102 -> Charlie Brown
+104 -> Diana Miller
+105 -> Bob Williams
+```
+
+---
+
+### 6. **Why Choose Different Maps?**
+- **HashMap** → Best for speed when order doesn’t matter.  
+- **LinkedHashMap** → Best when you need predictable **insertion order**.  
+- **TreeMap** → Best when you need **sorted order** automatically.  
+
+---
+
+## 📊 Summary Table
+
+| Map Type        | Ordering Behavior       | Performance | Use Case Example |
+|-----------------|-------------------------|-------------|------------------|
+| **HashMap**     | No order guaranteed     | O(1) avg    | Fast lookups by roll number |
+| **LinkedHashMap** | Preserves insertion order | O(1) avg    | Recently added students |
+| **TreeMap**     | Sorted by keys (roll no.) | O(log n)    | Faculty reports, sorted directories |
+
+---
+
+## 🎯 Learning Outcomes
+- Understand how to use **Maps** for key–value storage.  
+- Learn the differences between **HashMap, LinkedHashMap, and TreeMap**.  
+- Practice **CRUD operations** (Create, Read, Update, Delete) on student records.  
+- Recognize when to choose each map type depending on **speed, order, or sorting needs**.  
+
+---
+
+👉 This program is ideal for students learning the **Java Collections Framework** and for interview preparation where Map implementations are frequently discussed.  
+
+---
